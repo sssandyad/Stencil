@@ -8,6 +8,16 @@ feel right at home with Stencil.
 
 ## Example
 
+```html+django
+{% if variable %}
+  {{ variable }} was found.
+{% endif %}
+```
+
+```html+django
+{{ variable|uppercase }}
+```
+
 template.stencil
 ```html+django
 {# My comment is completely hidden #}
