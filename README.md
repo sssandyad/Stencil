@@ -8,7 +8,9 @@ feel right at home with Stencil.
 
 ## Example
 
+template.stencil
 ```html+django
+{# My comment is completely hidden #}
 There are {{ articles.count }} articles.
 
 <ul>
@@ -18,6 +20,7 @@ There are {{ articles.count }} articles.
 </ul>
 ```
 
+Renderer.swift
 ```swift
 import Stencil
 
@@ -28,16 +31,24 @@ struct Article {
 
 let context = [
   "articles": [
-    Article(title: "Migrating from OCUnit to XCTest", author: "Kyle Fuller"),
-    Article(title: "Memory Management with ARC", author: "Kyle Fuller"),
+    Article(title: "Template Engine for Swift", author: "Sandy Akbar"),
+    Article(title: "Automate Everything", author: "Sandy Akbar"),
   ]
 ]
 
-let environment = Environment(loader: FileSystemLoader(paths: ["templates/"]))
-let rendered = try environment.renderTemplate(name: "article_list.html", context: context)
-
-print(rendered)
+let environment = Environment(loader: FileSystemLoader(path: "template.stencil"))
+try environment.renderTemplate(name: "output.html", context: context)
 ```
+template.stencil
+```html+django
+There are 2 articles.
+
+<ul>
+    <li>Template Engine for Swift by Sandy Akbar</li>
+    <li>Automate Everything by Sandy Akbar</li>
+</ul>
+```
+
 
 ## Philosophy
 
