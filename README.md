@@ -15,6 +15,12 @@ feel right at home with Stencil.
 ```
 
 ```html+django
+{% for item in items %}
+  {{ item }}
+{% endfor %}
+```
+
+```html+django
 {{ variable|uppercase }}
 
 {{ array|join:"-"|capitalized }}
