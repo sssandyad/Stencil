@@ -16,6 +16,8 @@ feel right at home with Stencil.
 
 ```html+django
 {{ variable|uppercase }}
+
+{{ array|join:"-"|capitalized }}
 ```
 
 template.stencil
