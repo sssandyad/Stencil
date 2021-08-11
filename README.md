@@ -39,7 +39,7 @@ let context = [
 let environment = Environment(loader: FileSystemLoader(path: "template.stencil"))
 try environment.renderTemplate(name: "output.html", context: context)
 ```
-template.stencil
+output.html
 ```html+django
 There are 2 articles.
 
