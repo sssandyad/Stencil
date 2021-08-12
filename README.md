@@ -9,9 +9,9 @@ feel right at home with Stencil.
 ## Example
 
 ```html+django
-{% if variable %}
-  {{ variable }} was found.
-{% endif %}
+Hello Arthur
+Your beard trimmer will arrive on Nov 19, 2020.
+Well, on Nov 19, 2020 because of a Martian attack.
 ```
 
 ```html+django
